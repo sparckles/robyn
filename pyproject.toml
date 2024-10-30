@@ -1,5 +1,5 @@
 [build-system]
-requires = ["maturin>=0.12,<0.13"]
+requires = ["maturin==1.7.3"]
 build-backend = "maturin"
 
 [project]
@@ -48,7 +48,7 @@ Changelog = "https://github.com/sparckles/robyn/blob/main/CHANGELOG.md"
 
 [tool.poetry]
 name = "robyn"
-version = "0.62.1"
+version = "1.8.4"
 description = "A Super Fast Async Python Web Framework with a Rust runtime."
 authors = ["Sanskar Jethi <sansyrox@gmail.com>"]
 
@@ -56,7 +56,7 @@ authors = ["Sanskar Jethi <sansyrox@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 inquirerpy = "0.3.4"
-maturin = "1.7.4"
+maturin = "1.7.3"
 watchdog = "4.0.1"
 multiprocess = "0.70.14"
 nestd = "0.3.1"
