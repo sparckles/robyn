@@ -17,6 +17,7 @@ def tests(session):
         "--output",
         "requirements.txt",
     )
+    # session.run("export", "PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1")
     session.run("pip", "install", "-r", "requirements.txt")
     session.run("pip", "install", "-e", ".")
     if sys.platform == "darwin":
@@ -32,6 +33,7 @@ def tests(session):
         # "universal2-apple-darwin"
         "--out",
         "dist",
+        env={"PYO3_USE_ABI3_FORWARD_COMPATIBILITY": "1"},
     )
     session.run("pip", "install", "--no-index", "--find-links=dist/", "robyn")
     session.run("pytest")
