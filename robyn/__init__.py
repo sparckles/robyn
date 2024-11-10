@@ -14,6 +14,7 @@ from robyn.authentication import AuthenticationHandler
 from robyn.dependency_injection import DependencyMap
 from robyn.env_populator import load_vars
 from robyn.events import Events
+from robyn.exceptions import HTTPException, WebSocketException
 from robyn.jsonify import jsonify
 from robyn.logger import Colors, logger
 from robyn.openapi import OpenAPI
@@ -646,6 +647,8 @@ __all__ = [
     "SubRouter",
     "AuthenticationHandler",
     "Headers",
+    "HTTPException",
+    "WebSocketException",
     "WebSocketConnector",
     "WebSocket",
 ]
